@@ -7,10 +7,12 @@ import scala.io.StdIn._
 import game.Choice.{Rock, Paper, Scissor}
 
 // Players
-sealed trait Players
+sealed trait Players {
+    def choice: Choice
+}
     
 // Human
-case class Human() extends Players {
+class Human extends Players {
     private val mapUserInputWithChoice = Map('r' -> Rock, 'p' -> Paper, 's' -> Scissor)    
     
     /* 
@@ -19,7 +21,7 @@ case class Human() extends Players {
     */
 
     // def userInput: Char => Choice = chr => {  
-    def choice: Choice = {             
+    override def choice: Choice = {             
         var validChoice = Option.empty[Choice]
         println(s"${Console.GREEN}Pick a Sign: Rock, Paper or Scissor")
         while(validChoice.isEmpty) {
@@ -39,14 +41,14 @@ case class Human() extends Players {
 }
 
 // Computer/AI/Bot
-case class Computer() extends Players {
+class Computer extends Players {
      /* 
         Minimal Logic
         Computer Moves, 
         Randomly selects from sequence of choice
-      */
+    */
      private val allChoice = List(Rock, Paper, Scissor)
-     def choice: Choice = {
+     override def choice: Choice = {
          val random = new Random
          val computerChoice = allChoice(random.nextInt(allChoice.size)) 
          println(s"Computer Sign is $computerChoice")       

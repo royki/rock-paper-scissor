@@ -5,7 +5,11 @@ import scala.io.StdIn._
 import Rules._
 import Result._
 
-case class ComputerVsHuman() {
+sealed trait GameMode {
+    def play
+}
+
+class ComputerVsHuman extends GameMode {
 
     val user = new Human
     val bot = new Computer
@@ -27,7 +31,7 @@ case class ComputerVsHuman() {
     }    
 }
 
-case class ComputerVsComputer(numGamesToPlay: Int) {
+case class ComputerVsComputer(numGamesToPlay: Int) extends GameMode {
     val computer1 = new Computer
     val computer2 = new Computer
 
