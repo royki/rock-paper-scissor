@@ -18,7 +18,6 @@ class ComputerVsHuman {
                 |Rock-Paper-Scissor
                 """.stripMargin)
                 while(gamesPlayed < numGamesToPlay) {
-
                     val userChoice = user.choice      
                     val botChoice = bot.choice
                     val matchResult = pickWinner(userChoice, botChoice)
@@ -30,6 +29,7 @@ class ComputerVsHuman {
                      gamesPlayed += 1
                 }                        
         println("See you next time")
+        gamesPlayed = 0
     }    
 }
 

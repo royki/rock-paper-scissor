@@ -1,6 +1,6 @@
-##### [Rock-Paper-Scissor](http://en.wikipedia.org/wiki/Rock-paper-scissors)
+# [Rock-Paper-Scissor](http://en.wikipedia.org/wiki/Rock-paper-scissors)
 
-- Criteria 
+- Criteria
   - [x] Can I play Player vs Computer?
   - [x] Can I play Computer vs Computer?
   - [x] Can I play a different game each time?
@@ -11,13 +11,15 @@
   - [ ] Code Coverage.
     - [x] Rules (Game logic)
     - [ ] Game, GameMode, Players.
-    
-##### Environment
-- Scala version `2.12.8` (have to downgrade from `2.13.1` as there is some issues with [scoverage](https://github.com/weso/utils/issues/3))
+  
+## Environment
+
+- Scala version `2.12.10` (have to downgrade from `2.13.1` as there is some issues with [scoverage](https://github.com/weso/utils/issues/3))
 - Sbt version `1.3.2`
 - Scalafmt `2.2.0` (Rule is not specified yet)
 
-##### Execution
+## Execution
+
 - Clone the repo & go to the directory
 - Enter to the Game
   - `sbt run`
@@ -28,5 +30,4 @@
 - Run Coverage & Check
   - `sbt coverageReport`
   - Check `${repo}/src/target/scala-2.12/scoverage-report/index.html`
-
-
+  
