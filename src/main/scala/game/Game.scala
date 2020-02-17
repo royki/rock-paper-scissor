@@ -3,16 +3,17 @@ package game
 import scala.io.StdIn._
 
 class GameModes {
+    def numberOfTimeToPlay: Int => Int = num =>  num
     // Game Mode
     def gameModes: Int => Unit = i => i match {
         case 1 => 
+                    println(s"${Console.RED}Enter Number of times Computers'll play together${Console.RESET}")                    
                     val manVsbot = new ComputerVsHuman
-                    manVsbot.play
+                    manVsbot.play(numberOfTimeToPlay(readInt))
         case 2 => 
-                    println(s"${Console.RED}Enter Number of times Computers'll play together${Console.RESET}")
-                    def numberOfTimeToPlay: Int => Int = num =>  num
-                    val botVsbot = ComputerVsComputer(numberOfTimeToPlay(readInt))
-                    botVsbot.play
+                    println(s"${Console.RED}Enter Number of times Computers'll play together${Console.RESET}")                    
+                    val botVsbot = new ComputerVsComputer
+                    botVsbot.play(numberOfTimeToPlay(readInt))
         case _ => println(s"${Console.RED}Wrong Choice, Start Again${Console.RESET}")
     }    
 }
