@@ -4,7 +4,7 @@ package game
 sealed abstract class Choice
 
 object Choice {
-    case object Rock extends Choice
-    case object Paper extends Choice
-    case object Scissor extends Choice
+  case object Rock extends Choice
+  case object Paper extends Choice
+  case object Scissor extends Choice
 }
