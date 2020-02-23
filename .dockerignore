@@ -1,3 +1,6 @@
+.gitignore
+.dockerignore
+
 .settings/
 bin/
 *.class
@@ -9,12 +12,13 @@ target/
 *.db
 *.bin
 *.semanticdb
+.git/
 .bloop/
 .metals/
 .vscode/
 null/
 sharedDoc/
-metals.sbt
 project/target/
 project/project/
 project/metals.sbt
+docker-compose.yml

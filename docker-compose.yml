@@ -1,0 +1,11 @@
+version: '3'
+
+services:
+  game:
+    build: 
+      context:
+        .
+    volumes:
+    - ./sharedDoc:/sharedDoc
+    - ./target:/rock-paper-scissor/target
+    image: rps:v1

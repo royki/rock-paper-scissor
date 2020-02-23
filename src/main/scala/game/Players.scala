@@ -1,6 +1,6 @@
 package game
 
-import scala.util.{ Failure, Success, Try }
+import scala.util.{ Success, Try }
 import scala.util.Random
 import scala.io.StdIn._
 

@@ -1,7 +1,5 @@
 package game
 
-import scala.io.StdIn._
-
 import Rules._
 import Result._
 
